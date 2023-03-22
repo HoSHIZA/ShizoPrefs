@@ -1,0 +1,22 @@
+﻿{
+  "name": "com.shizogames.shizoprefs",
+  "version": "1.0.0",
+  "displayName": "ShizoPrefs",
+  "description": "A powerful wrapper for Unity PlayerPrefs, providing improved access to stored data.",
+  "unity": "2019.3",
+  "documentationUrl": "",
+  "dependencies": {},
+  "optionalDependencies": {},
+  "keywords": [
+    "Shizo",
+    "ShizoGames",
+    "ShizoPrefs",
+    "PlayerPrefs",
+    "Player Preferences"
+  ],
+  "author": {
+    "name": "ShizoGames",
+    "email": "hoshiza78@gmail.com",
+    "url": "https://hoshiza.itch.io"
+  }
+}
