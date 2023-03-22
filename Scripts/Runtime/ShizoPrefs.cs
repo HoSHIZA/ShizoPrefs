@@ -33,7 +33,7 @@ namespace ShizoGames.ShizoPrefs
         /// <typeparam name="T">The type of the value to be set.</typeparam>
         /// <param name="key">The PlayerPrefs key.</param>
         /// <param name="value">The value to be set.</param>
-        public static void SetSerializable<T>(string key, T value) where T : class, new()
+        public static void SetObject<T>(string key, T value) where T : class, new()
         {
             var formatter = new BinaryFormatter();
             var stream = new MemoryStream();
@@ -63,7 +63,7 @@ namespace ShizoGames.ShizoPrefs
         /// <param name="key">The PlayerPrefs key.</param>
         /// <param name="defaultValue">The default value to be returned if the key is not found.</param>
         /// <returns>Returns the value of the given key, or the default value if the key is not found.</returns>
-        public static T GetSerializable<T>(string key, T defaultValue = default) where T : class, new()
+        public static T GetObject<T>(string key, T defaultValue = default) where T : class, new()
         {
             var value = PlayerPrefs.GetString(key);
 
@@ -104,7 +104,7 @@ namespace ShizoGames.ShizoPrefs
             
             _playerPrefsProviders.Add(type, new PlayerPrefsProvider(getter, setter));
         }
-
+        
         /// <summary>
         /// Saves all PlayerPrefs to storage.
         /// </summary>
@@ -112,7 +112,7 @@ namespace ShizoGames.ShizoPrefs
         {
             PlayerPrefs.Save();
         }
-
+        
         /// <summary>
         /// Deletes all PlayerPrefs keys and values.
         /// </summary>
@@ -120,7 +120,7 @@ namespace ShizoGames.ShizoPrefs
         {
             PlayerPrefs.DeleteAll();
         }
-
+        
         /// <summary>
         /// Removes the specified key and its associated value from the preferences.
         /// </summary>
